@@ -1,0 +1,9 @@
+1. treba rezervaciju odradit
+kad se to napravi, tamo di je kontakt ispisat goste i njihove rezervacije
+ispisat racun
+
+2. ovisno o tome koji je botun detalji kliknut, prikazat podatke te sobe
+ja sam napravila samo kad je kliknuto na prvi botun, nema mi smisla radit za svaki posebno
+al ne znam nesto kako to 
+
+3. popis osoblja
