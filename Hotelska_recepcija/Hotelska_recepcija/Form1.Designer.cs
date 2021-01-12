@@ -244,21 +244,46 @@ namespace Hotelska_recepcija
 
         #endregion
 
+        private UC_Onama uC_Onama1 = new UC_Onama()
+        {
+            Visible = false
+        };
+
+        private UC_Smjestaj uC_Smjestaj1 = new UC_Smjestaj()
+        {
+            Visible = false
+        };
+
+        private UC_Naslovna uC_Naslovna1 = new UC_Naslovna()
+        {
+            Visible = false
+        };
+
+        private UC_Restorancs uC_Restorancs1 = new UC_Restorancs()
+        {
+            Visible = false
+        };
+
+        private UC_Kontakt uC_Kontakt1 = new UC_Kontakt()
+        {
+            Visible = false
+        };
+
+        private UC_PosebnaPonuda uC_PosebnaPonuda1 = new UC_PosebnaPonuda()
+        {
+            Visible = false
+        };
+
+
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btn_onama;
         private System.Windows.Forms.ToolStripButton btn_smjestaj;
         private System.Windows.Forms.Panel panel2;
-        private UC_Onama uC_Onama1;
-        private UC_Smjestaj uC_Smjestaj1;
-        private UC_Naslovna uC_Naslovna1;
         private System.Windows.Forms.ToolStripButton btn_restoran;
         private System.Windows.Forms.ToolStripButton btn_posebnaponuda;
         private System.Windows.Forms.ToolStripButton btn_kontakt;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private UC_Restorancs uC_Restorancs1;
-        private UC_PosebnaPonuda uC_PosebnaPonuda1;
-        private UC_Kontakt uC_Kontakt1;
     }
 }
 

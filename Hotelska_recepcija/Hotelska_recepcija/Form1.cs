@@ -14,90 +14,68 @@ namespace Hotelska_recepcija
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();          
+        }
+
+        private void VisualizeUC(Control value)
+        {
+            uC_Onama1.Visible = false;
+            uC_Smjestaj1.Visible = false;
+            uC_Naslovna1.Visible = false;
+            uC_Restorancs1.Visible = false;
+            uC_Kontakt1.Visible = false;
+            uC_PosebnaPonuda1.Visible = false;
+
+            value.Visible = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            panel1.Height = 50;
-            uC_Naslovna1.Show();
+            panel2.Controls.Add(uC_Onama1);
+            panel2.Controls.Add(uC_Smjestaj1);
+            panel2.Controls.Add(uC_Restorancs1);
+            panel2.Controls.Add(uC_Naslovna1);
+            panel2.Controls.Add(uC_PosebnaPonuda1);
+            panel2.Controls.Add(uC_Kontakt1);
+            VisualizeUC(uC_Naslovna1);
 
-            uC_Onama1.Hide();
-            uC_Smjestaj1.Hide();
-            uC_Restorancs1.Hide();
-            uC_PosebnaPonuda1.Hide();
-            uC_Kontakt1.Hide();
+            panel1.Height = 50;
         }
 
         private void btn_onama_Click(object sender, EventArgs e)
         {
-            uC_Onama1.Show();
-
-            uC_Naslovna1.Hide();
-            uC_Smjestaj1.Hide();
-            uC_Restorancs1.Hide();
-            uC_PosebnaPonuda1.Hide();
-            uC_Kontakt1.Hide();
+            VisualizeUC(uC_Onama1);
         }
 
         private void btn_smjestaj_Click(object sender, EventArgs e)
         {
-            uC_Smjestaj1.Show();
-
-            uC_Naslovna1.Hide();
-            uC_Onama1.Hide();
-            uC_Restorancs1.Hide();
-            uC_PosebnaPonuda1.Hide();
+            VisualizeUC(uC_Smjestaj1);
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            uC_Naslovna1.Show();
-
-            uC_Onama1.Hide();
-            uC_Smjestaj1.Hide();
-            uC_Restorancs1.Hide();
-            uC_PosebnaPonuda1.Hide();
-            uC_Kontakt1.Hide();
+            VisualizeUC(uC_Naslovna1);
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-
+            VisualizeUC(uC_Naslovna1);
         }
 
         private void btn_restoran_Click(object sender, EventArgs e)
         {
-            uC_Restorancs1.Show();
-
-            uC_Naslovna1.Hide();
-            uC_Onama1.Hide();
-            uC_Smjestaj1.Hide();
-            uC_PosebnaPonuda1.Hide();
-            uC_Kontakt1.Hide();
+            VisualizeUC(uC_Restorancs1);
         }
 
         private void btn_posebnaponuda_Click(object sender, EventArgs e)
         {
-            uC_PosebnaPonuda1.Show();
-
-            uC_Naslovna1.Hide();
-            uC_Onama1.Hide();
-            uC_Smjestaj1.Hide();
-            uC_Restorancs1.Hide();
-            uC_Kontakt1.Hide();
+            VisualizeUC(uC_PosebnaPonuda1);
 
         }
 
         private void btn_kontakt_Click(object sender, EventArgs e)
         {
-            uC_Kontakt1.Show();
-
-            uC_Naslovna1.Hide();
-            uC_Onama1.Hide();
-            uC_Smjestaj1.Hide();
-            uC_Restorancs1.Hide();
-            uC_PosebnaPonuda1.Hide();
+            VisualizeUC(uC_Kontakt1);
         }
     }
 }

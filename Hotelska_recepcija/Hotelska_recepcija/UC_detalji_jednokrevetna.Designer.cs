@@ -36,19 +36,21 @@ namespace Hotelska_recepcija
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F);
-            this.label1.Location = new System.Drawing.Point(336, 213);
+            this.label1.Location = new System.Drawing.Point(252, 173);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(376, 95);
+            this.label1.Size = new System.Drawing.Size(302, 76);
             this.label1.TabIndex = 0;
             this.label1.Text = "DETALJI";
             // 
             // UC_detalji_jednokrevetna
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UC_detalji_jednokrevetna";
-            this.Size = new System.Drawing.Size(925, 660);
+            this.Size = new System.Drawing.Size(1280, 648);
             this.ResumeLayout(false);
             this.PerformLayout();
 
