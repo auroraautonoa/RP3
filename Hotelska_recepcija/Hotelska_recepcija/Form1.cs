@@ -14,7 +14,7 @@ namespace Hotelska_recepcija
     {
         public Form1()
         {
-            InitializeComponent();          
+            InitializeComponent();
         }
 
         private void VisualizeUC(Control value)
@@ -38,6 +38,8 @@ namespace Hotelska_recepcija
             panel2.Controls.Add(uC_PosebnaPonuda1);
             panel2.Controls.Add(uC_Kontakt1);
             VisualizeUC(uC_Naslovna1);
+
+
 
             panel1.Height = 50;
         }

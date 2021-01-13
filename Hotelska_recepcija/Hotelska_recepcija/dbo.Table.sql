@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].Smjestaj
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Opis] NVARCHAR(MAX) NOT NULL, 
+    [Pojedinosti] NVARCHAR(MAX) NOT NULL
+)
