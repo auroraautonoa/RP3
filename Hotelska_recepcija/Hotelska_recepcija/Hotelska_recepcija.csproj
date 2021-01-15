@@ -64,6 +64,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BazaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BazaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Detalji_forma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,11 +83,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SmjestajDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SmjestajDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="UC_detalji_jednokrevetna.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +161,17 @@
     <EmbeddedResource Include="UC_Smjestaj.resx">
       <DependentUpon>UC_Smjestaj.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BazaDataSet.xsc">
+      <DependentUpon>BazaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BazaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BazaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BazaDataSet.xss">
+      <DependentUpon>BazaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -170,17 +181,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SmjestajDataSet.xsc">
-      <DependentUpon>SmjestajDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SmjestajDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SmjestajDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SmjestajDataSet.xss">
-      <DependentUpon>SmjestajDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -198,12 +198,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Smjestaj.mdf">
+    <Content Include="Baza.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Smjestaj_log.ldf">
+    <Content Include="Baza_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Smjestaj.mdf</DependentUpon>
+      <DependentUpon>Baza.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -34,5 +34,5 @@ C:\Users\Domagoj\Desktop\FAKS\Programski_Jezici\c#\projekt\RP3\Hotelska_recepcij
 C:\Users\Domagoj\Desktop\FAKS\Programski_Jezici\c#\projekt\RP3\Hotelska_recepcija\Hotelska_recepcija\obj\Debug\Hotelska_recepcija.csproj.CoreCompileInputs.cache
 C:\Users\Domagoj\Desktop\FAKS\Programski_Jezici\c#\projekt\RP3\Hotelska_recepcija\Hotelska_recepcija\obj\Debug\Hotelska_recepcija.exe
 C:\Users\Domagoj\Desktop\FAKS\Programski_Jezici\c#\projekt\RP3\Hotelska_recepcija\Hotelska_recepcija\obj\Debug\Hotelska_recepcija.pdb
-C:\Users\Domagoj\Desktop\FAKS\Programski_Jezici\c#\projekt\RP3\Hotelska_recepcija\Hotelska_recepcija\bin\Debug\Smjestaj.mdf
-C:\Users\Domagoj\Desktop\FAKS\Programski_Jezici\c#\projekt\RP3\Hotelska_recepcija\Hotelska_recepcija\bin\Debug\Smjestaj_log.ldf
+C:\Users\Domagoj\Desktop\FAKS\Programski_Jezici\c#\projekt\RP3\Hotelska_recepcija\Hotelska_recepcija\bin\Debug\Baza.mdf
+C:\Users\Domagoj\Desktop\FAKS\Programski_Jezici\c#\projekt\RP3\Hotelska_recepcija\Hotelska_recepcija\bin\Debug\Baza_log.ldf
