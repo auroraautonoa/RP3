@@ -25,7 +25,6 @@ namespace Hotelska_recepcija
             uC_Restorancs1.Visible = false;
             uC_Kontakt1.Visible = false;
             uC_PosebnaPonuda1.Visible = false;
-
             value.Visible = true;
         }
 
