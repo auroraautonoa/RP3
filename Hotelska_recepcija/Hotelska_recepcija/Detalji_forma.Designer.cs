@@ -32,6 +32,7 @@ namespace Hotelska_recepcija
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Detalji_forma));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.opisLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cijenaPanel = new System.Windows.Forms.Panel();
@@ -46,7 +47,6 @@ namespace Hotelska_recepcija
             this.label1 = new System.Windows.Forms.Label();
             this.date_prijava = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.opisLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -62,7 +62,7 @@ namespace Hotelska_recepcija
             this.tableLayoutPanel1.Controls.Add(this.opisLabel, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -78,11 +78,23 @@ namespace Hotelska_recepcija
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(424, 388);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // opisLabel
+            // 
+            this.opisLabel.AllowDrop = true;
+            this.opisLabel.AutoEllipsis = true;
+            this.opisLabel.Font = new System.Drawing.Font("Sitka Heading", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opisLabel.Location = new System.Drawing.Point(3, 392);
+            this.opisLabel.Name = "opisLabel";
+            this.opisLabel.Size = new System.Drawing.Size(422, 383);
+            this.opisLabel.TabIndex = 1;
+            this.opisLabel.Text = "label6";
+            this.opisLabel.UseCompatibleTextRendering = true;
             // 
             // panel1
             // 
@@ -90,7 +102,7 @@ namespace Hotelska_recepcija
             this.panel1.Controls.Add(this.label7);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(428, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(425, 784);
             this.panel1.TabIndex = 1;
@@ -112,6 +124,7 @@ namespace Hotelska_recepcija
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(362, 605);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // cijenaPanel
             // 
@@ -120,7 +133,7 @@ namespace Hotelska_recepcija
             this.cijenaPanel.Controls.Add(this.label5);
             this.cijenaPanel.Controls.Add(this.cijenaLabel);
             this.cijenaPanel.Font = new System.Drawing.Font("Sitka Heading", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cijenaPanel.Location = new System.Drawing.Point(59, 73);
+            this.cijenaPanel.Location = new System.Drawing.Point(63, 16);
             this.cijenaPanel.Margin = new System.Windows.Forms.Padding(8, 16, 8, 8);
             this.cijenaPanel.Name = "cijenaPanel";
             this.cijenaPanel.Size = new System.Drawing.Size(234, 156);
@@ -130,7 +143,7 @@ namespace Hotelska_recepcija
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sitka Heading", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(61, 0);
+            this.label4.Location = new System.Drawing.Point(58, 35);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 28);
@@ -140,12 +153,13 @@ namespace Hotelska_recepcija
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(65, 128);
+            this.label5.Location = new System.Drawing.Point(65, 93);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 28);
             this.label5.TabIndex = 9;
             this.label5.Text = "po noćenju";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // cijenaLabel
             // 
@@ -156,7 +170,7 @@ namespace Hotelska_recepcija
             this.cijenaLabel.Name = "cijenaLabel";
             this.cijenaLabel.Size = new System.Drawing.Size(232, 154);
             this.cijenaLabel.TabIndex = 0;
-            this.cijenaLabel.Text = "Cijena, npr 450kn";
+            this.cijenaLabel.Text = "NULL";
             this.cijenaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cijenaLabel.Click += new System.EventHandler(this.cijenaLabel_Click);
             // 
@@ -254,18 +268,6 @@ namespace Hotelska_recepcija
             this.label7.TabIndex = 1;
             this.label7.Text = "label7";
             // 
-            // opisLabel
-            // 
-            this.opisLabel.AllowDrop = true;
-            this.opisLabel.AutoEllipsis = true;
-            this.opisLabel.Font = new System.Drawing.Font("Sitka Heading", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opisLabel.Location = new System.Drawing.Point(3, 392);
-            this.opisLabel.Name = "opisLabel";
-            this.opisLabel.Size = new System.Drawing.Size(422, 383);
-            this.opisLabel.TabIndex = 1;
-            this.opisLabel.Text = "label6";
-            this.opisLabel.UseCompatibleTextRendering = true;
-            // 
             // Detalji_forma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,7 +277,7 @@ namespace Hotelska_recepcija
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Detalji_forma";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

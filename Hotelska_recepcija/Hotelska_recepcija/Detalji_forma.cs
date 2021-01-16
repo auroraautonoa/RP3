@@ -29,7 +29,7 @@ namespace Hotelska_recepcija
 
             connection = new SqlConnection(connectionString);
             connection.Open();
-            str = string.Format("SELECT * FROM Soba WHERE Id={0}",index);
+            str = string.Format("SELECT * FROM VrstaSobe WHERE Id={0}",index);
             command = new SqlCommand(str, connection);
             SqlDataReader reader = command.ExecuteReader();
             if( reader.Read() )
@@ -73,6 +73,16 @@ namespace Hotelska_recepcija
         }
 
         private void cijenaLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -24,26 +24,26 @@ namespace Hotelska_recepcija
 
         private void detalji_Jednokrevetna_Click(object sender, EventArgs e)
         {
-            Detalji_forma detalji = new Detalji_forma(1);
+            Detalji_forma detalji = new Detalji_forma(0);
             detalji.Show();
 
         }
 
         private void detalji_dvokrevetna_Click(object sender, EventArgs e)
         {
-            Detalji_forma detalji = new Detalji_forma(2);
+            Detalji_forma detalji = new Detalji_forma(1);
             detalji.Show();
         }
 
         private void detalji_francuski_Click(object sender, EventArgs e)
         {
-            Detalji_forma detalji = new Detalji_forma(3);
+            Detalji_forma detalji = new Detalji_forma(2);
             detalji.Show();
         }
 
         private void detalji_apartman_Click(object sender, EventArgs e)
         {
-            Detalji_forma detalji = new Detalji_forma(4);
+            Detalji_forma detalji = new Detalji_forma(3);
             detalji.Show();
         }
     }
