@@ -108,11 +108,21 @@ namespace Hotelska_recepcija
 
             reader.Close();
 
-            str = string.Format("INSERT INTO Rezervacija ([Id_soba], [Datum_rezervacije], [Datum_poc], [Datum_kraj]) VALUES ({0}, N'{1}', N'{2}', N'{3}')\n", id.ToString(), today, sDate, eDate);
+            str = string.Format("INSERT INTO [dbo].[Rezervacija] ([Id_soba], [Datum_rezervacije], [Datum_poc], [Datum_kraj]) VALUES (@id, @datr, @datpoc, @datkraj)");
             using (command = new SqlCommand(str, connection))
             {
-                command.ExecuteNonQuery();
-            }
+                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@datr", today);
+                command.Parameters.AddWithValue("@datpoc", sDate);
+                command.Parameters.AddWithValue("@datkraj", eDate);
+
+                int n = command.ExecuteNonQuery();
+
+                if (n > 0) MessageBox.Show("Uspjesno rezervirano!");
+                else MessageBox.Show("Nesto je poslo po krivu");
+            }           
+            
+            connection.Close();
 
         }
         private void SobaBox_SelectedIndexChanged(object sender, EventArgs e)

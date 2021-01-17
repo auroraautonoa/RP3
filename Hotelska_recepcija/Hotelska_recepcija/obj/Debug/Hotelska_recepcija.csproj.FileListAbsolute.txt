@@ -36,8 +36,6 @@ C:\Users\Domagoj\Desktop\FAKS\Programski_Jezici\c#\projekt\RP3\Hotelska_recepcij
 C:\Users\Domagoj\Desktop\FAKS\Programski_Jezici\c#\projekt\RP3\Hotelska_recepcija\Hotelska_recepcija\obj\Debug\Hotelska_recepcija.pdb
 C:\Users\Domagoj\Desktop\FAKS\Programski_Jezici\c#\projekt\RP3\Hotelska_recepcija\Hotelska_recepcija\bin\Debug\Baza.mdf
 C:\Users\Domagoj\Desktop\FAKS\Programski_Jezici\c#\projekt\RP3\Hotelska_recepcija\Hotelska_recepcija\bin\Debug\Baza_log.ldf
-C:\Users\marti\Documents\hash-mamisla\external\RP3\Hotelska_recepcija\Hotelska_recepcija\bin\Debug\Baza.mdf
-C:\Users\marti\Documents\hash-mamisla\external\RP3\Hotelska_recepcija\Hotelska_recepcija\bin\Debug\Baza_log.ldf
 C:\Users\marti\Documents\hash-mamisla\external\RP3\Hotelska_recepcija\Hotelska_recepcija\bin\Debug\Hotelska_recepcija.exe.config
 C:\Users\marti\Documents\hash-mamisla\external\RP3\Hotelska_recepcija\Hotelska_recepcija\bin\Debug\Hotelska_recepcija.exe
 C:\Users\marti\Documents\hash-mamisla\external\RP3\Hotelska_recepcija\Hotelska_recepcija\bin\Debug\Hotelska_recepcija.pdb
@@ -57,3 +55,5 @@ C:\Users\marti\Documents\hash-mamisla\external\RP3\Hotelska_recepcija\Hotelska_r
 C:\Users\marti\Documents\hash-mamisla\external\RP3\Hotelska_recepcija\Hotelska_recepcija\obj\Debug\Hotelska_recepcija.exe
 C:\Users\marti\Documents\hash-mamisla\external\RP3\Hotelska_recepcija\Hotelska_recepcija\obj\Debug\Hotelska_recepcija.pdb
 C:\Users\marti\Documents\hash-mamisla\external\RP3\Hotelska_recepcija\Hotelska_recepcija\obj\Debug\Hotelska_recepcija.Rezervacija.resources
+C:\Users\marti\Documents\hash-mamisla\external\RP3\Hotelska_recepcija\Hotelska_recepcija\bin\Debug\Baza.mdf
+C:\Users\marti\Documents\hash-mamisla\external\RP3\Hotelska_recepcija\Hotelska_recepcija\bin\Debug\Baza_log.ldf
