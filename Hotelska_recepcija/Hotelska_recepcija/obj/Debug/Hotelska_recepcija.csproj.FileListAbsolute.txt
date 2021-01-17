@@ -56,3 +56,4 @@ C:\Users\marti\Documents\hash-mamisla\external\RP3\Hotelska_recepcija\Hotelska_r
 C:\Users\marti\Documents\hash-mamisla\external\RP3\Hotelska_recepcija\Hotelska_recepcija\obj\Debug\Hotelska_recepcija.csproj.CoreCompileInputs.cache
 C:\Users\marti\Documents\hash-mamisla\external\RP3\Hotelska_recepcija\Hotelska_recepcija\obj\Debug\Hotelska_recepcija.exe
 C:\Users\marti\Documents\hash-mamisla\external\RP3\Hotelska_recepcija\Hotelska_recepcija\obj\Debug\Hotelska_recepcija.pdb
+C:\Users\marti\Documents\hash-mamisla\external\RP3\Hotelska_recepcija\Hotelska_recepcija\obj\Debug\Hotelska_recepcija.Rezervacija.resources

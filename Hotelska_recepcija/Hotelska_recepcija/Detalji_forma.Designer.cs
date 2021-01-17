@@ -40,18 +40,20 @@ namespace Hotelska_recepcija
             this.label5 = new System.Windows.Forms.Label();
             this.cijenaLabel = new System.Windows.Forms.Label();
             this.btn_Rezerviraj = new System.Windows.Forms.Button();
-            this.txt_brojOsoba = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.datum_odjava = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.date_prijava = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
+            this.broj_osoba = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.cijenaPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.broj_osoba)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -111,9 +113,10 @@ namespace Hotelska_recepcija
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.IndianRed;
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.broj_osoba);
             this.panel2.Controls.Add(this.cijenaPanel);
             this.panel2.Controls.Add(this.btn_Rezerviraj);
-            this.panel2.Controls.Add(this.txt_brojOsoba);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.datum_odjava);
@@ -178,32 +181,21 @@ namespace Hotelska_recepcija
             // 
             this.btn_Rezerviraj.AutoSize = true;
             this.btn_Rezerviraj.Font = new System.Drawing.Font("Sitka Text", 12F);
-            this.btn_Rezerviraj.Location = new System.Drawing.Point(76, 514);
+            this.btn_Rezerviraj.Location = new System.Drawing.Point(81, 483);
             this.btn_Rezerviraj.Margin = new System.Windows.Forms.Padding(8, 16, 8, 8);
             this.btn_Rezerviraj.Name = "btn_Rezerviraj";
             this.btn_Rezerviraj.Size = new System.Drawing.Size(202, 41);
             this.btn_Rezerviraj.TabIndex = 6;
-            this.btn_Rezerviraj.Text = "Rezerviraj!";
+            this.btn_Rezerviraj.Text = "Provjeri dostupnost";
             this.btn_Rezerviraj.UseVisualStyleBackColor = true;
-            // 
-            // txt_brojOsoba
-            // 
-            this.txt_brojOsoba.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.txt_brojOsoba.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_brojOsoba.Font = new System.Drawing.Font("Sitka Text", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_brojOsoba.Location = new System.Drawing.Point(51, 455);
-            this.txt_brojOsoba.Margin = new System.Windows.Forms.Padding(8, 16, 8, 8);
-            this.txt_brojOsoba.Multiline = true;
-            this.txt_brojOsoba.Name = "txt_brojOsoba";
-            this.txt_brojOsoba.Size = new System.Drawing.Size(268, 35);
-            this.txt_brojOsoba.TabIndex = 5;
+            this.btn_Rezerviraj.Click += new System.EventHandler(this.btn_Rezerviraj_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Heading", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(46, 426);
+            this.label3.Location = new System.Drawing.Point(46, 344);
             this.label3.Margin = new System.Windows.Forms.Padding(8, 16, 8, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 28);
@@ -215,7 +207,7 @@ namespace Hotelska_recepcija
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sitka Heading", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(46, 357);
+            this.label2.Location = new System.Drawing.Point(44, 269);
             this.label2.Margin = new System.Windows.Forms.Padding(8, 16, 8, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 28);
@@ -229,18 +221,19 @@ namespace Hotelska_recepcija
             this.datum_odjava.Checked = false;
             this.datum_odjava.CustomFormat = "";
             this.datum_odjava.Font = new System.Drawing.Font("Sitka Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datum_odjava.Location = new System.Drawing.Point(49, 387);
+            this.datum_odjava.Location = new System.Drawing.Point(49, 304);
             this.datum_odjava.Margin = new System.Windows.Forms.Padding(8, 16, 8, 8);
             this.datum_odjava.Name = "datum_odjava";
             this.datum_odjava.Size = new System.Drawing.Size(270, 25);
             this.datum_odjava.TabIndex = 2;
+            this.datum_odjava.ValueChanged += new System.EventHandler(this.datum_odjava_ValueChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sitka Heading", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(46, 292);
+            this.label1.Location = new System.Drawing.Point(44, 196);
             this.label1.Margin = new System.Windows.Forms.Padding(8, 16, 8, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 28);
@@ -253,11 +246,12 @@ namespace Hotelska_recepcija
             this.date_prijava.Checked = false;
             this.date_prijava.CustomFormat = "";
             this.date_prijava.Font = new System.Drawing.Font("Sitka Text", 10F);
-            this.date_prijava.Location = new System.Drawing.Point(49, 322);
+            this.date_prijava.Location = new System.Drawing.Point(49, 230);
             this.date_prijava.Margin = new System.Windows.Forms.Padding(8, 16, 8, 8);
             this.date_prijava.Name = "date_prijava";
             this.date_prijava.Size = new System.Drawing.Size(270, 24);
             this.date_prijava.TabIndex = 0;
+            this.date_prijava.ValueChanged += new System.EventHandler(this.date_prijava_ValueChanged);
             // 
             // label7
             // 
@@ -267,6 +261,20 @@ namespace Hotelska_recepcija
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 1;
             this.label7.Text = "label7";
+            // 
+            // broj_osoba
+            // 
+            this.broj_osoba.Location = new System.Drawing.Point(49, 383);
+            this.broj_osoba.Name = "broj_osoba";
+            this.broj_osoba.Size = new System.Drawing.Size(270, 20);
+            this.broj_osoba.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(78, 554);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(250, 13);
+            this.label6.TabIndex = 9;
             // 
             // Detalji_forma
             // 
@@ -291,6 +299,7 @@ namespace Hotelska_recepcija
             this.panel2.PerformLayout();
             this.cijenaPanel.ResumeLayout(false);
             this.cijenaPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.broj_osoba)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -306,7 +315,6 @@ namespace Hotelska_recepcija
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label cijenaLabel;
         private System.Windows.Forms.Button btn_Rezerviraj;
-        private System.Windows.Forms.TextBox txt_brojOsoba;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker datum_odjava;
@@ -314,6 +322,8 @@ namespace Hotelska_recepcija
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label opisLabel;
+        private System.Windows.Forms.NumericUpDown broj_osoba;
+        private System.Windows.Forms.Label label6;
         //asdfasdf
     }
 }
