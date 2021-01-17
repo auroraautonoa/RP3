@@ -82,7 +82,7 @@
             this.Controls.Add(this.btn_rezerviraj);
             this.Controls.Add(this.Rez_naslov);
             this.Name = "Rezervacija";
-            this.Text = "Form2";
+            this.Text = "Rezervacija";
             this.Load += new System.EventHandler(this.Rezervacija_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
