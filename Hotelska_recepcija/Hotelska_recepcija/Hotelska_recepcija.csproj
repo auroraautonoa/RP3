@@ -95,6 +95,12 @@
     <Compile Include="UC_detalji_jednokrevetna.Designer.cs">
       <DependentUpon>UC_detalji_jednokrevetna.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Ispis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Ispis.Designer.cs">
+      <DependentUpon>UC_Ispis.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Kontakt.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_detalji_jednokrevetna.resx">
       <DependentUpon>UC_detalji_jednokrevetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Ispis.resx">
+      <DependentUpon>UC_Ispis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Kontakt.resx">
       <DependentUpon>UC_Kontakt.cs</DependentUpon>

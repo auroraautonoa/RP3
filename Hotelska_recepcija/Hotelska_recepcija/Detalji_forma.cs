@@ -36,7 +36,7 @@ namespace Hotelska_recepcija
             if( reader.Read() )
             {
                 string text = reader["Opis"].ToString();
-                opisLabel.Text = "\nOPIS: \n";
+                opisLabel.Text = "\nOPIS: \n"; 
                 opisLabel.Text += text;
                 text = reader["Pojedinosti"].ToString();
                 opisLabel.Text += "\n\nPOJEDINOSTI: \n";

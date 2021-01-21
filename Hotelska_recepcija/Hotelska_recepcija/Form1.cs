@@ -25,9 +25,9 @@ namespace Hotelska_recepcija
             uC_Restorancs1.Visible = false;
             uC_Kontakt1.Visible = false;
             uC_PosebnaPonuda1.Visible = false;
+            uC_Ispis1.Visible = false;
             value.Visible = true;
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             panel2.Controls.Add(uC_Onama1);
@@ -36,9 +36,8 @@ namespace Hotelska_recepcija
             panel2.Controls.Add(uC_Naslovna1);
             panel2.Controls.Add(uC_PosebnaPonuda1);
             panel2.Controls.Add(uC_Kontakt1);
+            panel2.Controls.Add(uC_Ispis1);
             VisualizeUC(uC_Naslovna1);
-
-
 
             panel1.Height = 50;
         }
@@ -76,7 +75,15 @@ namespace Hotelska_recepcija
 
         private void btn_kontakt_Click(object sender, EventArgs e)
         {
+            panel2.Controls.Remove(uC_Kontakt1);
+            uC_Kontakt1 = new UC_Kontakt();
+            panel2.Controls.Add(uC_Kontakt1);
             VisualizeUC(uC_Kontakt1);
+        }
+
+        private void btn_ispis_Click(object sender, EventArgs e)
+        {
+            VisualizeUC(uC_Ispis1); 
         }
     }
 }

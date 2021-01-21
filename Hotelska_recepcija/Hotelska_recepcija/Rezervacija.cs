@@ -36,7 +36,7 @@ namespace Hotelska_recepcija
 
             for (int i = 0; i < broj_osoba; ++i)
             {
-                TextBox ime = new TextBox();
+                TextBox ime = new TextBox(); 
                 TextBox prezime = new TextBox();
                 TextBox oib = new TextBox();
 
@@ -82,7 +82,7 @@ namespace Hotelska_recepcija
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) 
         {
             int id = 0;
 
@@ -118,10 +118,37 @@ namespace Hotelska_recepcija
 
                 int n = command.ExecuteNonQuery();
 
-                if (n > 0) MessageBox.Show("Uspjesno rezervirano!");
-                else MessageBox.Show("Nesto je poslo po krivu");
-            }           
-            
+            }
+
+            str = string.Format("SELECT Id FROM Rezervacija ORDER BY Id DESC"); 
+
+            command = new SqlCommand(str, connection);
+            reader = command.ExecuteReader();
+
+            if (reader.Read())
+            {
+                id = (int)reader["Id"];
+            }
+
+            reader.Close();
+
+            for (int i = 0; i < brojOsoba; ++i) 
+            {
+                str = string.Format("INSERT INTO [dbo].[Osoba] ([Id_rezervacija], [Ime], [Prezime], [OIB]) VALUES (@id, @ime, @prez, @oib)");
+                using (command = new SqlCommand(str, connection))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+                    command.Parameters.AddWithValue("@ime", this.Controls["Osoba_" + (i + 1).ToString() + "_Ime"].Text);
+                    command.Parameters.AddWithValue("@prez", this.Controls["Osoba_" + (i + 1).ToString() + "_Prezime"].Text);
+                    command.Parameters.AddWithValue("@oib", this.Controls["Osoba_" + (i + 1).ToString() + "_OIB"].Text);
+
+                    int n = command.ExecuteNonQuery(); 
+
+                    if (n > 0) MessageBox.Show("Uspjesno rezervirano!");
+                    else MessageBox.Show("Nesto je poslo po krivu"); 
+                }
+            }
+
             connection.Close();
 
         }

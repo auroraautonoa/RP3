@@ -38,13 +38,13 @@ namespace Hotelska_recepcija
             this.btn_restoran = new System.Windows.Forms.ToolStripButton();
             this.btn_posebnaponuda = new System.Windows.Forms.ToolStripButton();
             this.btn_kontakt = new System.Windows.Forms.ToolStripButton();
+            this.btn_ispis = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.uC_PosebnaPonuda1 = new Hotelska_recepcija.UC_PosebnaPonuda();
             this.uC_Restorancs1 = new Hotelska_recepcija.UC_Restorancs();
             this.uC_Naslovna1 = new Hotelska_recepcija.UC_Naslovna();
             this.uC_Smjestaj1 = new Hotelska_recepcija.UC_Smjestaj();
             this.uC_Onama1 = new Hotelska_recepcija.UC_Onama();
-            this.uC_Kontakt1 = new Hotelska_recepcija.UC_Kontakt();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -55,8 +55,9 @@ namespace Hotelska_recepcija
             this.panel1.Controls.Add(this.toolStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1582, 100);
+            this.panel1.Size = new System.Drawing.Size(1419, 81);
             this.panel1.TabIndex = 0;
             // 
             // toolStrip1
@@ -71,10 +72,11 @@ namespace Hotelska_recepcija
             this.btn_smjestaj,
             this.btn_restoran,
             this.btn_posebnaponuda,
-            this.btn_kontakt});
+            this.btn_kontakt,
+            this.btn_ispis});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1582, 100);
+            this.toolStrip1.Size = new System.Drawing.Size(1419, 81);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -161,75 +163,86 @@ namespace Hotelska_recepcija
             this.btn_kontakt.Text = "KONTAKT";
             this.btn_kontakt.Click += new System.EventHandler(this.btn_kontakt_Click);
             // 
+            // btn_ispis
+            // 
+            this.btn_ispis.AutoSize = false;
+            this.btn_ispis.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_ispis.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ispis.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_ispis.Image = ((System.Drawing.Image)(resources.GetObject("btn_ispis.Image")));
+            this.btn_ispis.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_ispis.Name = "btn_ispis";
+            this.btn_ispis.Size = new System.Drawing.Size(220, 97);
+            this.btn_ispis.Text = "ISPISI/IZBRISI";
+            this.btn_ispis.ToolTipText = "ISPISI";
+            this.btn_ispis.Click += new System.EventHandler(this.btn_ispis_Click);
+            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.uC_Kontakt1);
             this.panel2.Controls.Add(this.uC_PosebnaPonuda1);
             this.panel2.Controls.Add(this.uC_Restorancs1);
             this.panel2.Controls.Add(this.uC_Naslovna1);
             this.panel2.Controls.Add(this.uC_Smjestaj1);
             this.panel2.Controls.Add(this.uC_Onama1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 100);
+            this.panel2.Location = new System.Drawing.Point(0, 81);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1582, 753);
+            this.panel2.Size = new System.Drawing.Size(1419, 612);
             this.panel2.TabIndex = 1;
             // 
             // uC_PosebnaPonuda1
             // 
-            this.uC_PosebnaPonuda1.Location = new System.Drawing.Point(302, 37);
-            this.uC_PosebnaPonuda1.Margin = new System.Windows.Forms.Padding(2, 3, 3, 3);
+            this.uC_PosebnaPonuda1.Location = new System.Drawing.Point(226, 30);
+            this.uC_PosebnaPonuda1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uC_PosebnaPonuda1.Name = "uC_PosebnaPonuda1";
-            this.uC_PosebnaPonuda1.Size = new System.Drawing.Size(1074, 764);
+            this.uC_PosebnaPonuda1.Size = new System.Drawing.Size(806, 621);
             this.uC_PosebnaPonuda1.TabIndex = 4;
             // 
             // uC_Restorancs1
             // 
             this.uC_Restorancs1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_Restorancs1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Restorancs1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uC_Restorancs1.Name = "uC_Restorancs1";
-            this.uC_Restorancs1.Size = new System.Drawing.Size(1582, 753);
+            this.uC_Restorancs1.Size = new System.Drawing.Size(1419, 612);
             this.uC_Restorancs1.TabIndex = 3;
             // 
             // uC_Naslovna1
             // 
             this.uC_Naslovna1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_Naslovna1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Naslovna1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_Naslovna1.Name = "uC_Naslovna1";
-            this.uC_Naslovna1.Size = new System.Drawing.Size(1582, 753);
+            this.uC_Naslovna1.Size = new System.Drawing.Size(1419, 612);
             this.uC_Naslovna1.TabIndex = 2;
             // 
             // uC_Smjestaj1
             // 
             this.uC_Smjestaj1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_Smjestaj1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Smjestaj1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_Smjestaj1.Name = "uC_Smjestaj1";
-            this.uC_Smjestaj1.Size = new System.Drawing.Size(1582, 753);
+            this.uC_Smjestaj1.Size = new System.Drawing.Size(1419, 612);
             this.uC_Smjestaj1.TabIndex = 1;
             // 
             // uC_Onama1
             // 
             this.uC_Onama1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_Onama1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Onama1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_Onama1.Name = "uC_Onama1";
-            this.uC_Onama1.Size = new System.Drawing.Size(1582, 753);
+            this.uC_Onama1.Size = new System.Drawing.Size(1419, 612);
             this.uC_Onama1.TabIndex = 0;
-            // 
-            // uC_Kontakt1
-            // 
-            this.uC_Kontakt1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Kontakt1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Kontakt1.Name = "uC_Kontakt1";
-            this.uC_Kontakt1.Size = new System.Drawing.Size(1582, 753);
-            this.uC_Kontakt1.TabIndex = 5;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1582, 853);
+            this.ClientSize = new System.Drawing.Size(1419, 693);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotelska_recepcija";
@@ -273,6 +286,10 @@ namespace Hotelska_recepcija
         {
             Visible = false
         };
+        private UC_Ispis uC_Ispis1 = new UC_Ispis()
+        {
+            Visible = false
+        };
 
 
         private System.Windows.Forms.Panel panel1;
@@ -284,6 +301,7 @@ namespace Hotelska_recepcija
         private System.Windows.Forms.ToolStripButton btn_posebnaponuda;
         private System.Windows.Forms.ToolStripButton btn_kontakt;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btn_ispis;
     }
 }
 
